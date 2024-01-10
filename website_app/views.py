@@ -4,14 +4,10 @@ from django.http import HttpResponse,JsonResponse
 
 
 def http_test(request):
-    return HttpResponse('http-test page')
+    return render(request,'http-test.html')
 
 def jason_test(request):
-    return JsonResponse({
-        'name':'sina',
-        'color':'black',
-        'age':'26',
-    })
+    return render(request,'jason-test.html')
 
 def contact(request):
-    return HttpResponse('contact page of sina \n phone number: 09032535769')
+    return render(request,'contact.html')
